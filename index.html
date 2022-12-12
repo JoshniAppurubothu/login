@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css">
+    <script src="https://kit.fontawesome.com/0d9b51d65a.js" crossorigin="anonymous"></script>
+    <script>
+        function valid(){
+           var firstname=document.getElementById("firstname").value;
+           var nameCheck=/^[a-zA-Z ]+$/
+
+           var email=document.getElementById("email").value;
+           var emailCheck=/^[a-zA-Z0-9\._]+@([a-z]+).([a-z]{2,3})$/
+
+           var phoneNumber=document.getElementById("number").value;
+           var mobile=/^[0-9]\d{9}$/
+
+           var password=document.getElementById("password").value;
+          
+           var female=document.getElementById("female")
+           var male=document.getElementById("male") 
+           console.log("male:",male.checked,"female:",female.checked)
+           
+
+
+           if(firstname=="" || firstname.length<3){
+            alert("Please enter your name")
+            return false;
+           }
+           if(!firstname.match(nameCheck)){
+            alert("Name must carry only characters")
+            return false;
+           }
+
+
+           if(email==""){
+            alert("Email is mandatory")
+            return false
+           }
+           if(!email.match(emailCheck)){
+            alert("check your email once")
+            return false
+           }
+           
+
+
+           if(phoneNumber==""){
+            alert("Enter your phone number")
+            return false;
+           }
+           if(!phoneNumber.match(mobile)){
+            alert(" mobile number")
+            return false
+           }
+           
+           if(password==""||password.length<8){
+            alert("Enter password")
+            return false
+           }
+           
+
+           if(male.checked==false && female.checked==false){
+            alert("select your Gender")
+            return false;
+           }
+
+
+
+
+           return true;  
+        }
+      
+    </script>
+</head>
+<body>
+    <div class="bgcolor">
+        <div class="d-flex flex-row justify-content-center">
+        <div class="card">
+            <h1 class="one">Registration page</h1><br/>
+
+            <form onsubmit="return valid()" action="phoness.html">
+                
+                <p><i class="fa-solid fa-user"></i> <input id="firstname" placeholder= "Enter your name"></p>
+                <p><i class="fa-solid fa-envelope"></i> <input id="email" placeholder="Enter your email"></p>
+                <p><i class="fa-solid fa-phone"></i> <input id="number" placeholder="Enter Your phone Number"></p>
+                <p><i class="fa-solid fa-key"></i> <input id="password" placeholder="Enter your password"></p>
+                <p>
+                    <input type="radio" name="gender" id="female">Female
+                    <input type="radio" name="gender" id="male">male
+                </p><br/>
+        
+                <button class="bt">Sign Up</button>
+                
+            </form>
+            
+        </div> 
+        </div>
+    </div>
+</body>
+</html>

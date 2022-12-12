@@ -1,0 +1,32 @@
+
+
+
+.card{
+    height: 400px;
+    width:350px;
+    background-color:crimson;
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 15%;
+    border: 2%;
+   
+}
+.one{
+    margin-top: 15%;
+    color:greenyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.bt{
+    margin-top: 0.1%;
+    margin-left: 2%;
+    color: red;
+    text-decoration: none;
+    background-color:yellow;
+    padding: 8px 18px;
+    border-radius: 5px;
+    border: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    
+}
